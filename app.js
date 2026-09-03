@@ -150,7 +150,7 @@ function confirmBooking() {
 }
 
 function openWhatsApp() {
-  window.open('https://wa.me/5493534790232?text=Hola%20María%2C%20quiero%20consultar%20sobre%20mis%20opciones%20de%20consulta', '_blank');
+  window.open('https://wa.me/5493537674702?text=Hola%20María%2C%20quiero%20consultar%20sobre%20mis%20opciones%20de%20consulta', '_blank');
 }
 
 // Inicializar

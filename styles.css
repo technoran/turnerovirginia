@@ -84,13 +84,13 @@ main {
 
 /* LOGO */
 .logo {
-  width: 92px;
-  height: 92px;
+  width: min(100%, 340px);
+  aspect-ratio: 3.8 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 23px;
+  margin: 0 auto 19px;
   opacity: 0;
   animation: logoIn 0.8s cubic-bezier(.22,.61,.36,1) 0.1s forwards;
 }
@@ -100,6 +100,7 @@ main {
   height: 100%;
   display: block;
   object-fit: contain;
+  filter: drop-shadow(0 7px 12px rgba(45, 125, 111, 0.12));
 }
 
 @keyframes logoIn {
@@ -213,6 +214,15 @@ main {
   font-size: 18px;
 }
 
+.consultation-title {
+  margin-top: 5px;
+  margin-bottom: -9px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
 /* POLÍTICAS */
 .policies {
   width: 100%;
@@ -324,6 +334,185 @@ main {
   border-radius: 4px;
   margin-bottom: 6px;
   border-left: 3px solid var(--success);
+}
+
+/* SERVICIOS DEPORTIVOS */
+.consultation-page {
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+  animation: fadeUp .7s ease-out .25s forwards;
+}
+
+.eyebrow {
+  margin-bottom: 5px;
+  color: var(--mint);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.consultation-page h2 {
+  max-width: 360px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  line-height: 1.05;
+  font-weight: 600;
+}
+
+.section-lead {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 19px;
+}
+
+.service-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 5px 18px rgba(31, 90, 80, 0.04);
+}
+
+.service-card.featured {
+  border-color: rgba(45, 125, 111, 0.45);
+  background: rgba(232, 244, 242, 0.58);
+}
+
+.service-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.service-letter {
+  display: flex;
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--white);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.service-heading h3 {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.service-heading p {
+  margin-top: 3px;
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+
+.service-data {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 15px 0 5px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(45, 125, 111, 0.14);
+  color: var(--ink-soft);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+}
+
+.service-data strong {
+  color: var(--mint-dark);
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+}
+
+.advance {
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+
+.advance strong {
+  color: var(--ink);
+}
+
+.protocol {
+  margin-top: 14px;
+  padding: 12px;
+  border-left: 2px solid var(--mint-light);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.protocol h4 {
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.protocol p,
+.protocol li {
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.protocol ul {
+  margin-top: 6px;
+  padding-left: 16px;
+}
+
+.protocol li {
+  margin-bottom: 4px;
+}
+
+.service-btn {
+  width: 100%;
+  min-height: 42px;
+  margin-top: 14px;
+  border: 1px solid var(--mint);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--mint-dark);
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.service-btn:hover {
+  background: var(--mint);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.service-card.compact .service-data {
+  margin-bottom: 0;
+}
+
+.continue-btn:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.continue-btn:disabled:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: var(--line);
+  box-shadow: none;
+  color: var(--ink);
+  transform: none;
 }
 
 /* BOTONES */

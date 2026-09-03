@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lic. María Gómez | Nutricionista</title>
-  <meta name="description" content="Lic. María Gómez - Nutricionista M.P. 5847. Planes personalizados. Reservá tu consulta.">
+  <title>Lic. Virginia Rubiano | Nutricionista Deportiva</title>
+  <meta name="description" content="Lic. Virginia Rubiano - Nutricionista Deportiva M.P. 5847. Planes personalizados. Reservá tu consulta.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
     <!-- PANTALLA 1: PRESENTACIÓN -->
     <div id="screen1" class="screen active">
       <div class="logo">
-        <img src="image/logo-nutritionista.png" alt="Logo de María Gómez Nutricionista">
+        <img src="image/logo.png" alt="Logo de Virginia Rubiano Nutrición Deportiva">
       </div>
 
       <section class="name">
-        <h1>María Gómez</h1>
-        <p class="profession">Nutricionista</p>
+        <h1>Virginia Rubiano</h1>
+        <p class="profession">Nutricionista Deportiva</p>
         <p class="license">M.P. 5847 · Lic. en Nutrición</p>
       </section>
 
@@ -33,7 +33,9 @@
       <section class="intro">
         <h2>Bienvenido/a</h2>
         <p class="intro-text">
-          Soy especialista en nutrición deportiva y reeducación alimentaria. Mi objetivo es acompañarte en tu camino hacia un estilo de vida más saludable con planes personalizados según tus necesidades.
+          Hola soy Vir, Lic en nutrición, especializada en deporte y antropometrista ISAK II.
+Me dedico a acompañar a quienes buscan mejorar su calidad de vida, conformar hábitos, priozar su salud y mejorar el rendimiento deportivo.
+¡Estoy encantada de poder acompañarte en este proceso!
         </p>
         <div class="features">
           <div class="feature">
@@ -50,54 +52,93 @@
           </div>
         </div>
       </section>
-
+      <h3 class="consultation-title">Tipos de consulta</h3>
       <button class="continue-btn" type="button" onclick="goToScreen(2)">
-        CONOCER PRECIOS Y CONDICIONES
+        DEPORTIVA CON MEDICIÓN ANTROPOMÉTRICA
+      </button>
+      <button class="continue-btn secondary" type="button" disabled>
+        GENERAL
       </button>
     </div>
 
-    <!-- PANTALLA 2: CONDICIONES Y PAGOS -->
+    <!-- PANTALLA 2: DEPORTIVA CON MEDICIÓN ANTROPOMÉTRICA -->
     <div id="screen2" class="screen">
       <button class="back-btn" onclick="goToScreen(1)" aria-label="Volver">← Atrás</button>
 
-      <section class="policies">
-        <h2>Condiciones y Precios</h2>
-        
-        <div class="price-box">
-          <div class="price-item">
-            <h3>Consulta Inicial</h3>
-            <p class="price">$5.500</p>
-            <p class="price-desc">Evaluación completa + plan inicial</p>
-          </div>
-          <div class="price-item">
-            <h3>Seguimiento</h3>
-            <p class="price">$4.000</p>
-            <p class="price-desc">Cada consulta mensual</p>
-          </div>
-        </div>
+      <section class="consultation-page">
+        <p class="eyebrow">Nutrición deportiva</p>
+        <h2>Deportiva con medición antropométrica</h2>
+        <p class="section-lead">Elegí la modalidad que mejor acompaña tu proceso.</p>
 
-        <div class="policies-content">
-          
+        <div class="service-list">
+          <article class="service-card featured">
+            <div class="service-heading">
+              <span class="service-letter">A</span>
+              <div>
+                <h3>Primera vez</h3>
+                <p>Medición antropométrica</p>
+              </div>
+            </div>
+            <div class="service-data">
+              <span>60 min</span>
+              <strong>$60.000</strong>
+            </div>
+            <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
+            <div class="protocol">
+              <h4>¿Cómo debo ir a la consulta?</h4>
+              <p>Para realizar la medición de la composición corporal es necesario:</p>
+              <ul>
+                <li>Ropa deportiva: short, calza corta y top deportivo.</li>
+                <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
+                <li>Evitá usar cremas corporales.</li>
+                <li>Evitá realizar actividad física inmediatamente antes.</li>
+              </ul>
+            </div>
+            <button class="service-btn" type="button" onclick="goToScreen(3)">ELEGIR ESTA OPCIÓN</button>
+          </article>
 
-          <h3>Reserva y cancelación</h3>
-          <p>Se requiere un adelanto de <strong>$1.500</strong> para confirmar el turno.</p>
-          <p>Cancelar o reprogramar con <strong>48h de anticipación</strong> → el adelanto se usa para otro turno en 30 días.</p>
-          <p>Con menos de 24h o inasistencia → el adelanto no es reembolsable.</p>
+          <article class="service-card">
+            <div class="service-heading">
+              <span class="service-letter">B</span>
+              <div>
+                <h3>Primera vez + plan alimentario</h3>
+                <p>Medición y plan personalizado</p>
+              </div>
+            </div>
+            <div class="service-data">
+              <span>60 min</span>
+              <strong>$100.000</strong>
+            </div>
+            <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
+            <div class="protocol">
+              <h4>¿Cómo debo ir a la consulta?</h4>
+              <p>Para realizar la medición de la composición corporal es necesario:</p>
+              <ul>
+                <li>Ropa deportiva: short, calza corta y top deportivo.</li>
+                <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
+                <li>Evitá usar cremas corporales.</li>
+                <li>Evitá realizar actividad física inmediatamente antes.</li>
+              </ul>
+            </div>
+            <button class="service-btn" type="button" onclick="goToScreen(3)">ELEGIR ESTA OPCIÓN</button>
+          </article>
 
-          <h3>¿Qué llevará tu primera consulta?</h3>
-          <ul class="checklist">
-            <li>✓ Evaluación de hábitos alimentarios</li>
-            <li>✓ Mediciones (peso, altura, cintura)</li>
-            <li>✓ Cálculo de necesidades calóricas</li>
-            <li>✓ Plan nutricional personalizado</li>
-            <li>✓ Recomendaciones prácticas</li>
-          </ul>
+          <article class="service-card compact">
+            <div class="service-heading">
+              <span class="service-letter">C</span>
+              <div>
+                <h3>Control de seguimiento</h3>
+                <p>Continuidad del proceso</p>
+              </div>
+            </div>
+            <div class="service-data">
+              <span>30 min</span>
+              <strong>$60.000</strong>
+            </div>
+            <button class="service-btn" type="button" onclick="goToScreen(3)">ELEGIR ESTA OPCIÓN</button>
+          </article>
         </div>
       </section>
-
-      <button class="continue-btn primary" onclick="goToScreen(3)">
-        AGENDAR CONSULTA
-      </button>
 
       <button class="continue-btn secondary" onclick="openWhatsApp()">
         📱 CONSULTAR POR WHATSAPP
@@ -160,7 +201,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="socials">
-        <a class="social" href="https://instagram.com/nutricionista.mariagomez" target="_blank" rel="noopener" aria-label="Instagram">
+        <a class="social" href="https://instagram.com/virrnutricion" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
             <rect x="3" y="3" width="18" height="18" rx="5" />
             <circle cx="12" cy="12" r="4" />
@@ -169,7 +210,7 @@
           Instagram
         </a>
       </div>
-      <p>Centro de Salud · Villa María · Córdoba</p>
+      <p>COWORKING · VIBRA SALUD · Villa María · Córdoba</p>
     </footer>
   </main>
 
