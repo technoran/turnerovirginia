@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lic. María Gómez | Nutricionista</title>
+  <meta name="description" content="Lic. María Gómez - Nutricionista M.P. 5847. Planes personalizados. Reservá tu consulta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <!-- PANTALLA 1: PRESENTACIÓN -->
+    <div id="screen1" class="screen active">
+      <div class="logo">
+        <img src="image/logo-nutritionista.png" alt="Logo de María Gómez Nutricionista">
+      </div>
+
+      <section class="name">
+        <h1>María Gómez</h1>
+        <p class="profession">Nutricionista</p>
+        <p class="license">M.P. 5847 · Lic. en Nutrición</p>
+      </section>
+
+      <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-star">✦</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <section class="intro">
+        <h2>Bienvenido/a</h2>
+        <p class="intro-text">
+          Soy especialista en nutrición deportiva y reeducación alimentaria. Mi objetivo es acompañarte en tu camino hacia un estilo de vida más saludable con planes personalizados según tus necesidades.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <span class="feature-icon">📊</span>
+            <span class="feature-text">Planes personalizados</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📈</span>
+            <span class="feature-text">Seguimiento detallado</span>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">💬</span>
+            <span class="feature-text">Asesoramiento continuo</span>
+          </div>
+        </div>
+      </section>
+
+      <button class="continue-btn" type="button" onclick="goToScreen(2)">
+        CONOCER PRECIOS Y CONDICIONES
+      </button>
+    </div>
+
+    <!-- PANTALLA 2: CONDICIONES Y PAGOS -->
+    <div id="screen2" class="screen">
+      <button class="back-btn" onclick="goToScreen(1)" aria-label="Volver">← Atrás</button>
+
+      <section class="policies">
+        <h2>Condiciones y Precios</h2>
+        
+        <div class="price-box">
+          <div class="price-item">
+            <h3>Consulta Inicial</h3>
+            <p class="price">$5.500</p>
+            <p class="price-desc">Evaluación completa + plan inicial</p>
+          </div>
+          <div class="price-item">
+            <h3>Seguimiento</h3>
+            <p class="price">$4.000</p>
+            <p class="price-desc">Cada consulta mensual</p>
+          </div>
+        </div>
+
+        <div class="policies-content">
+          
+
+          <h3>Reserva y cancelación</h3>
+          <p>Se requiere un adelanto de <strong>$1.500</strong> para confirmar el turno.</p>
+          <p>Cancelar o reprogramar con <strong>48h de anticipación</strong> → el adelanto se usa para otro turno en 30 días.</p>
+          <p>Con menos de 24h o inasistencia → el adelanto no es reembolsable.</p>
+
+          <h3>¿Qué llevará tu primera consulta?</h3>
+          <ul class="checklist">
+            <li>✓ Evaluación de hábitos alimentarios</li>
+            <li>✓ Mediciones (peso, altura, cintura)</li>
+            <li>✓ Cálculo de necesidades calóricas</li>
+            <li>✓ Plan nutricional personalizado</li>
+            <li>✓ Recomendaciones prácticas</li>
+          </ul>
+        </div>
+      </section>
+
+      <button class="continue-btn primary" onclick="goToScreen(3)">
+        AGENDAR CONSULTA
+      </button>
+
+      <button class="continue-btn secondary" onclick="openWhatsApp()">
+        📱 CONSULTAR POR WHATSAPP
+      </button>
+    </div>
+
+    <!-- PANTALLA 3: TURNERO -->
+    <div id="screen3" class="screen">
+      <button class="back-btn" onclick="goToScreen(2)" aria-label="Volver">← Atrás</button>
+
+      <section class="booking">
+        <h2>Selecciona tu turno</h2>
+        <p class="booking-subtitle">Próximas disponibilidades</p>
+
+        <div class="calendar-selector">
+          <div class="month-nav">
+            <button onclick="prevMonth()">← Anterior</button>
+            <span id="currentMonth">Febrero 2025</span>
+            <button onclick="nextMonth()">Siguiente →</button>
+          </div>
+
+          <div class="calendar">
+            <div class="cal-header">
+              <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
+            </div>
+            <div id="calendarDays" class="cal-days"></div>
+          </div>
+        </div>
+
+        <div id="timeSlots" class="time-slots" style="display: none;">
+          <p id="selectedDate" class="selected-date"></p>
+          <div id="timeOptions" class="time-options"></div>
+        </div>
+
+        <div id="bookingSummary" class="booking-summary" style="display: none;">
+          <h3>Resumen de tu turno</h3>
+          <div class="summary-item">
+            <span>Consulta:</span>
+            <span id="summaryType">Consulta inicial</span>
+          </div>
+          <div class="summary-item">
+            <span>Fecha:</span>
+            <span id="summaryDate"></span>
+          </div>
+          <div class="summary-item">
+            <span>Hora:</span>
+            <span id="summaryTime"></span>
+          </div>
+          <div class="summary-item price">
+            <span>Adelanto:</span>
+            <span id="summaryPrice">$1.500</span>
+          </div>
+          <button class="continue-btn primary" onclick="confirmBooking()">
+            CONFIRMAR Y PAGAR
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="socials">
+        <a class="social" href="https://instagram.com/nutricionista.mariagomez" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          Instagram
+        </a>
+      </div>
+      <p>Centro de Salud · Villa María · Córdoba</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
