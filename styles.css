@@ -172,21 +172,42 @@ main {
 /* INTRO */
 .intro {
   width: 100%;
-  padding: 17px 18px 16px;
-  border: 1px solid var(--line);
+  padding: 20px 18px 18px;
+  border: 1px solid rgba(45, 125, 111, 0.3);
   border-radius: 7px;
-  background: rgba(232, 244, 242, 0.4);
+  background: rgba(232, 244, 242, 0.72);
+  box-shadow: 0 8px 24px rgba(31, 90, 80, 0.09);
   text-align: left;
   opacity: 0;
   animation: fadeUp .7s ease-out .75s forwards;
 }
 
 .intro h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 23px;
+  font-size: 27px;
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.welcome-emoji {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 22px;
+  animation: wave 1.8s ease-in-out .9s both;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(12deg); }
+  80% { transform: rotate(-4deg); }
 }
 
 .intro-text {

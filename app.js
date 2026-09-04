@@ -162,7 +162,7 @@ function confirmBooking() {
 }
 
 function openWhatsApp() {
-  window.open('https://wa.me/5493537674702?text=Hola%20María%2C%20quiero%20consultar%20sobre%20mis%20opciones%20de%20consulta', '_blank');
+  window.open('https://wa.me/5493537674702?text=Hola%20Virginia%2C%20te%20escribo%20desde%20el%20turnero%20online%2C%20quiero%20consultar%20mis%20opciones', '_blank');
 }
 
 // Inicializar
