@@ -1,6 +1,7 @@
 // Control de pantallas
 let currentScreen = 1;
 let bookingBackScreen = 2;
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbze-XWj4fAzQuqFqhpU3szY9joEOWXNVxz2qbBPNYEC6bkwGNQ9kXBAfBolsMEZPQmgMw/exec';
 
 function goToScreen(screenNumber) {
   document.getElementById(`screen${currentScreen}`).classList.remove('active');
@@ -18,6 +19,11 @@ function toggleService(button) {
 function openBooking(sourceScreen) {
   bookingBackScreen = sourceScreen;
   goToScreen(3);
+}
+
+function openAppScript(service) {
+  const url = `${APPS_SCRIPT_URL}?servicio=${encodeURIComponent(service)}`;
+  window.location.href = url;
 }
 
 // Calendario
