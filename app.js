@@ -1,11 +1,23 @@
 // Control de pantallas
 let currentScreen = 1;
+let bookingBackScreen = 2;
 
 function goToScreen(screenNumber) {
   document.getElementById(`screen${currentScreen}`).classList.remove('active');
   currentScreen = screenNumber;
   document.getElementById(`screen${screenNumber}`).classList.add('active');
   window.scrollTo(0, 0);
+}
+
+function toggleService(button) {
+  const card = button.closest('.service-card');
+  const isOpen = card.classList.toggle('open');
+  button.setAttribute('aria-expanded', isOpen);
+}
+
+function openBooking(sourceScreen) {
+  bookingBackScreen = sourceScreen;
+  goToScreen(3);
 }
 
 // Calendario

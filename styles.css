@@ -387,10 +387,43 @@ main {
   background: rgba(232, 244, 242, 0.58);
 }
 
-.service-heading {
+.service-toggle {
+  width: 100%;
   display: flex;
   align-items: flex-start;
   gap: 11px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.service-toggle > div {
+  flex: 1;
+}
+
+.service-chevron {
+  margin-left: auto;
+  color: var(--mint);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform .25s ease;
+}
+
+.service-card.open .service-chevron {
+  transform: rotate(180deg);
+}
+
+.service-details {
+  display: none;
+  padding-top: 1px;
+}
+
+.service-card.open .service-details {
+  display: block;
+  animation: fadeUp .3s ease-out;
 }
 
 .service-letter {

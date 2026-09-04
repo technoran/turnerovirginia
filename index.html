@@ -56,7 +56,7 @@ Me dedico a acompañar a quienes buscan mejorar su calidad de vida, conformar h�
       <button class="continue-btn" type="button" onclick="goToScreen(2)">
         DEPORTIVA CON MEDICIÓN ANTROPOMÉTRICA
       </button>
-      <button class="continue-btn secondary" type="button" disabled>
+      <button class="continue-btn secondary" type="button" onclick="goToScreen(4)">
         GENERAL
       </button>
     </div>
@@ -72,70 +72,126 @@ Me dedico a acompañar a quienes buscan mejorar su calidad de vida, conformar h�
 
         <div class="service-list">
           <article class="service-card featured">
-            <div class="service-heading">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
               <span class="service-letter">A</span>
               <div>
                 <h3>Primera vez</h3>
                 <p>Medición antropométrica</p>
               </div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$60.000</strong></div>
+              <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
+              <div class="protocol">
+                <h4>¿Cómo debo ir a la consulta?</h4>
+                <p>Para realizar la medición de la composición corporal es necesario:</p>
+                <ul>
+                  <li>Ropa deportiva: short, calza corta y top deportivo.</li>
+                  <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
+                  <li>Evitá usar cremas corporales.</li>
+                  <li>Evitá realizar actividad física inmediatamente antes.</li>
+                </ul>
+              </div>
+              <button class="service-btn" type="button" onclick="openBooking(2)">ELEGIR ESTA OPCIÓN</button>
             </div>
-            <div class="service-data">
-              <span>60 min</span>
-              <strong>$60.000</strong>
-            </div>
-            <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
-            <div class="protocol">
-              <h4>¿Cómo debo ir a la consulta?</h4>
-              <p>Para realizar la medición de la composición corporal es necesario:</p>
-              <ul>
-                <li>Ropa deportiva: short, calza corta y top deportivo.</li>
-                <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
-                <li>Evitá usar cremas corporales.</li>
-                <li>Evitá realizar actividad física inmediatamente antes.</li>
-              </ul>
-            </div>
-            <button class="service-btn" type="button" onclick="goToScreen(3)">ELEGIR ESTA OPCIÓN</button>
           </article>
 
           <article class="service-card">
-            <div class="service-heading">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
               <span class="service-letter">B</span>
               <div>
                 <h3>Primera vez + plan alimentario</h3>
                 <p>Medición y plan personalizado</p>
               </div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$100.000</strong></div>
+              <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
+              <div class="protocol">
+                <h4>¿Cómo debo ir a la consulta?</h4>
+                <p>Para realizar la medición de la composición corporal es necesario:</p>
+                <ul>
+                  <li>Ropa deportiva: short, calza corta y top deportivo.</li>
+                  <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
+                  <li>Evitá usar cremas corporales.</li>
+                  <li>Evitá realizar actividad física inmediatamente antes.</li>
+                </ul>
+              </div>
+              <button class="service-btn" type="button" onclick="openBooking(2)">ELEGIR ESTA OPCIÓN</button>
             </div>
-            <div class="service-data">
-              <span>60 min</span>
-              <strong>$100.000</strong>
-            </div>
-            <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
-            <div class="protocol">
-              <h4>¿Cómo debo ir a la consulta?</h4>
-              <p>Para realizar la medición de la composición corporal es necesario:</p>
-              <ul>
-                <li>Ropa deportiva: short, calza corta y top deportivo.</li>
-                <li>Ayuno alimentario de 2 horas. Evitá ingerir grandes cantidades de líquido 30 minutos antes.</li>
-                <li>Evitá usar cremas corporales.</li>
-                <li>Evitá realizar actividad física inmediatamente antes.</li>
-              </ul>
-            </div>
-            <button class="service-btn" type="button" onclick="goToScreen(3)">ELEGIR ESTA OPCIÓN</button>
           </article>
 
           <article class="service-card compact">
-            <div class="service-heading">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
               <span class="service-letter">C</span>
               <div>
                 <h3>Control de seguimiento</h3>
                 <p>Continuidad del proceso</p>
               </div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>30 min</span><strong>$60.000</strong></div>
+              <button class="service-btn" type="button" onclick="openBooking(2)">ELEGIR ESTA OPCIÓN</button>
             </div>
-            <div class="service-data">
-              <span>30 min</span>
-              <strong>$60.000</strong>
+          </article>
+        </div>
+      </section>
+
+      <button class="continue-btn secondary" onclick="openWhatsApp()">
+        📱 CONSULTAR POR WHATSAPP
+      </button>
+    </div>
+
+    <!-- PANTALLA 4: GENERAL -->
+    <div id="screen4" class="screen">
+      <button class="back-btn" onclick="goToScreen(1)" aria-label="Volver">← Atrás</button>
+
+      <section class="consultation-page">
+        <p class="eyebrow">Nutrición personalizada</p>
+        <h2>Consulta general</h2>
+        <p class="section-lead">Elegí la modalidad que mejor acompaña tu proceso.</p>
+
+        <div class="service-list">
+          <article class="service-card featured compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">A</span>
+              <div><h3>Primera vez</h3><p>Evaluación inicial</p></div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$45.000</strong></div>
+              <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
+              <button class="service-btn" type="button" onclick="openBooking(4)">ELEGIR ESTA OPCIÓN</button>
             </div>
-            <button class="service-btn" type="button" onclick="goToScreen(3)">ELEGIR ESTA OPCIÓN</button>
+          </article>
+
+          <article class="service-card compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">B</span>
+              <div><h3>Primera vez + plan alimentario</h3><p>Plan personalizado</p></div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>60 min</span><strong>$85.000</strong></div>
+              <p class="advance">Anticipo para reservar: <strong>$10.000</strong></p>
+              <button class="service-btn" type="button" onclick="openBooking(4)">ELEGIR ESTA OPCIÓN</button>
+            </div>
+          </article>
+
+          <article class="service-card compact">
+            <button class="service-toggle" type="button" onclick="toggleService(this)" aria-expanded="false">
+              <span class="service-letter">C</span>
+              <div><h3>Control</h3><p>Seguimiento del proceso</p></div>
+              <span class="service-chevron">⌄</span>
+            </button>
+            <div class="service-details">
+              <div class="service-data"><span>30 min</span><strong>$45.000</strong></div>
+              
+              <button class="service-btn" type="button" onclick="openBooking(4)">ELEGIR ESTA OPCIÓN</button>
+            </div>
           </article>
         </div>
       </section>
@@ -147,7 +203,7 @@ Me dedico a acompañar a quienes buscan mejorar su calidad de vida, conformar h�
 
     <!-- PANTALLA 3: TURNERO -->
     <div id="screen3" class="screen">
-      <button class="back-btn" onclick="goToScreen(2)" aria-label="Volver">← Atrás</button>
+      <button class="back-btn" onclick="goToScreen(bookingBackScreen)" aria-label="Volver">← Atrás</button>
 
       <section class="booking">
         <h2>Selecciona tu turno</h2>
