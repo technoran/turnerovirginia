@@ -1,7 +1,7 @@
 // Control de pantallas
 let currentScreen = 1;
 let bookingBackScreen = 2;
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwiwKO6iaPhuLMsmjQbiQ0Lj0itf1YerDJ6N8QpqKKZ_GFiadTXIi7JmxV-72fiILaH/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx7Ps04GYi83mi56I36rCYUXnS4LvV3YJsOx7rfSkHL6BUABILlhhCarWUH1bqer-bulQ/exec';
 
 function goToScreen(screenNumber) {
   document.getElementById(`screen${currentScreen}`).classList.remove('active');
