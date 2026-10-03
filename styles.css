@@ -906,6 +906,16 @@ main {
   .divider { margin-top: 26px; margin-bottom: 27px; }
 }
 
+/* PC / tablet: misma columna única (landing), más ancha y con letra algo mayor */
+@media (min-width: 768px) {
+  body { padding: 60px 24px 50px; }
+  main { max-width: 560px; zoom: 1.15; }
+}
+
+@media (min-width: 1200px) {
+  main { zoom: 1.25; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation: none !important;
